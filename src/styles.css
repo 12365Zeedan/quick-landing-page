@@ -1,0 +1,317 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+
+/*
+ * PharmLedger Design System
+ * Healthcare finance SaaS — premium, trustworthy, fast.
+ * Default: dark. Toggleable to light.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-glow: var(--primary-glow);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --font-sans: "Plus Jakarta Sans", "Cairo", system-ui, sans-serif;
+  --font-arabic: "Cairo", "Tajawal", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* DARK (default) */
+:root {
+  --radius: 0.875rem;
+
+  --background: oklch(0.18 0.025 235);
+  --foreground: oklch(0.97 0.01 220);
+
+  --card: oklch(0.235 0.028 235);
+  --card-foreground: oklch(0.97 0.01 220);
+
+  --popover: oklch(0.22 0.028 235);
+  --popover-foreground: oklch(0.97 0.01 220);
+
+  --primary: oklch(0.62 0.12 180);
+  --primary-foreground: oklch(0.99 0.005 180);
+  --primary-glow: oklch(0.72 0.14 180);
+
+  --secondary: oklch(0.62 0.16 235);
+  --secondary-foreground: oklch(0.99 0.005 235);
+
+  --muted: oklch(0.28 0.02 235);
+  --muted-foreground: oklch(0.7 0.02 230);
+
+  --accent: oklch(0.32 0.04 200);
+  --accent-foreground: oklch(0.97 0.01 220);
+
+  --destructive: oklch(0.62 0.22 27);
+  --destructive-foreground: oklch(0.99 0.01 30);
+
+  --success: oklch(0.66 0.17 150);
+  --success-foreground: oklch(0.99 0.005 150);
+
+  --warning: oklch(0.72 0.16 65);
+  --warning-foreground: oklch(0.2 0.02 65);
+
+  --info: oklch(0.65 0.14 235);
+  --info-foreground: oklch(0.99 0.005 235);
+
+  --border: oklch(0.32 0.025 235 / 60%);
+  --input: oklch(0.32 0.025 235);
+  --ring: oklch(0.62 0.12 180);
+
+  --sidebar: oklch(0.205 0.028 235);
+  --sidebar-foreground: oklch(0.92 0.015 220);
+  --sidebar-accent: oklch(0.28 0.035 200);
+  --sidebar-accent-foreground: oklch(0.97 0.01 220);
+  --sidebar-border: oklch(0.3 0.025 235 / 50%);
+
+  --chart-1: oklch(0.66 0.14 180); /* teal */
+  --chart-2: oklch(0.65 0.16 235); /* sky */
+  --chart-3: oklch(0.7 0.17 150);  /* green */
+  --chart-4: oklch(0.75 0.16 65);  /* amber */
+  --chart-5: oklch(0.65 0.2 320);  /* magenta */
+
+  --gradient-primary: linear-gradient(135deg, oklch(0.62 0.12 180), oklch(0.65 0.16 235));
+  --gradient-glow: radial-gradient(circle at 30% 20%, oklch(0.62 0.12 180 / 25%), transparent 60%);
+  --gradient-card: linear-gradient(145deg, oklch(0.245 0.03 235 / 95%), oklch(0.21 0.025 235 / 80%));
+  --shadow-glow: 0 0 40px -10px oklch(0.62 0.14 180 / 40%);
+  --shadow-elegant: 0 12px 40px -12px oklch(0.1 0.02 235 / 60%), 0 2px 8px -2px oklch(0.1 0.02 235 / 40%);
+  --shadow-soft: 0 4px 20px -8px oklch(0.1 0.02 235 / 50%);
+}
+
+.light {
+  --background: oklch(0.985 0.005 220);
+  --foreground: oklch(0.18 0.025 235);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.025 235);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.025 235);
+
+  --primary: oklch(0.5 0.11 180);
+  --primary-foreground: oklch(0.99 0.005 180);
+  --primary-glow: oklch(0.62 0.13 180);
+
+  --secondary: oklch(0.55 0.15 235);
+  --secondary-foreground: oklch(0.99 0.005 235);
+
+  --muted: oklch(0.95 0.01 220);
+  --muted-foreground: oklch(0.45 0.02 230);
+
+  --accent: oklch(0.94 0.025 200);
+  --accent-foreground: oklch(0.25 0.04 200);
+
+  --destructive: oklch(0.58 0.22 27);
+  --destructive-foreground: oklch(0.99 0.01 30);
+
+  --success: oklch(0.58 0.16 150);
+  --success-foreground: oklch(0.99 0.005 150);
+
+  --warning: oklch(0.65 0.15 65);
+  --warning-foreground: oklch(0.99 0.01 65);
+
+  --info: oklch(0.55 0.14 235);
+  --info-foreground: oklch(0.99 0.005 235);
+
+  --border: oklch(0.9 0.012 220);
+  --input: oklch(0.92 0.012 220);
+  --ring: oklch(0.5 0.11 180);
+
+  --sidebar: oklch(0.99 0.005 220);
+  --sidebar-foreground: oklch(0.22 0.025 235);
+  --sidebar-accent: oklch(0.94 0.025 200);
+  --sidebar-accent-foreground: oklch(0.25 0.04 200);
+  --sidebar-border: oklch(0.9 0.012 220);
+
+  --chart-1: oklch(0.5 0.13 180);
+  --chart-2: oklch(0.55 0.15 235);
+  --chart-3: oklch(0.58 0.16 150);
+  --chart-4: oklch(0.65 0.15 65);
+  --chart-5: oklch(0.55 0.2 320);
+
+  --gradient-primary: linear-gradient(135deg, oklch(0.5 0.11 180), oklch(0.55 0.15 235));
+  --gradient-glow: radial-gradient(circle at 30% 20%, oklch(0.5 0.11 180 / 12%), transparent 60%);
+  --gradient-card: linear-gradient(145deg, oklch(1 0 0), oklch(0.98 0.005 220));
+  --shadow-glow: 0 0 40px -10px oklch(0.5 0.13 180 / 25%);
+  --shadow-elegant: 0 12px 40px -12px oklch(0.5 0.05 235 / 18%), 0 2px 8px -2px oklch(0.5 0.05 235 / 10%);
+  --shadow-soft: 0 4px 20px -8px oklch(0.5 0.05 235 / 12%);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    font-family: var(--font-sans);
+  }
+
+  html[dir="rtl"] {
+    font-family: var(--font-arabic);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    background-image: var(--gradient-glow);
+    background-attachment: fixed;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .font-mono,
+  .tabular {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: var(--gradient-card);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .animate-count-up {
+    animation: countUp 0.6s ease-out;
+  }
+
+  @keyframes countUp {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-in {
+    animation: slideIn 0.4s ease-out;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(var(--slide-from, -20px));
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* RTL-aware slide */
+  html[dir="rtl"] .animate-slide-in {
+    --slide-from: 20px;
+  }
+}
+
+/* Native date/time inputs: LTR by default, RTL when document direction is RTL so day/month/year read right-to-left */
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"] {
+  direction: ltr;
+  text-align: start;
+}
+
+html[dir="rtl"] input[type="date"],
+html[dir="rtl"] input[type="time"],
+html[dir="rtl"] input[type="datetime-local"],
+html[dir="rtl"] input[type="month"],
+html[dir="rtl"] input[type="week"] {
+  direction: rtl !important;
+  text-align: right;
+}
+
+/* RTL support for shadcn Select (period pickers etc.) */
+html[dir="rtl"] [data-radix-select-trigger] > span:first-child {
+  text-align: right !important;
+  direction: rtl;
+}
+
+html[dir="rtl"] [data-radix-select-viewport] {
+  direction: rtl;
+  text-align: right;
+}

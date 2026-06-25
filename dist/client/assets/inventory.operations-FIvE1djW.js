@@ -1,0 +1,1 @@
+import{a5 as o}from"./index-B2BbflKq.js";import{C as t}from"./coming-soon-C7g-CmpE.js";import"./topbar-r33J1bzS.js";import"./sparkles-C1wa0IQl.js";import"./construction-D1KxbMtI.js";const e=()=>o.jsx(t,{titleKey:"inventoryOperations"});export{e as component};

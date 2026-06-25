@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <title>PharmLedger — وضع عدم الاتصال</title>
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif;
+        background: linear-gradient(135deg, #0b0f1a 0%, #131a2c 100%);
+        color: #e6e9f2;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+      }
+      .card {
+        max-width: 540px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 24px;
+        padding: 40px;
+        backdrop-filter: blur(20px);
+      }
+      h1 { font-size: 28px; margin: 0 0 12px; }
+      p { color: #a8b0c4; line-height: 1.7; }
+      button {
+        margin-top: 24px;
+        background: linear-gradient(135deg, #6366f1, #8b5cf6);
+        color: white;
+        border: 0;
+        padding: 14px 28px;
+        border-radius: 12px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .dot {
+        display: inline-block;
+        width: 10px; height: 10px;
+        border-radius: 50%;
+        background: #ef4444;
+        margin-inline-end: 8px;
+        animation: pulse 1.4s infinite;
+      }
+      @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div><span class="dot"></span>غير متصل بالإنترنت</div>
+      <h1>التطبيق يعمل بدون اتصال</h1>
+      <p>
+        لا يمكن تحميل أحدث نسخة من التطبيق الآن. بياناتك المحفوظة محلياً
+        آمنة في مجلد <code>%APPDATA%\PharmLedger</code> على جهازك.
+        تحقق من اتصال الإنترنت ثم اضغط إعادة المحاولة.
+      </p>
+      <button onclick="location.reload()">إعادة المحاولة</button>
+    </div>
+  </body>
+</html>
